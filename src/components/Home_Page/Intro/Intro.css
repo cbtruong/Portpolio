@@ -1,0 +1,103 @@
+#intro {
+	height: calc(100vh - 4rem);
+	width: 100vw;
+	max-width: 85rem;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+}
+.bg {
+	position: absolute;
+	top: -4rem;
+	right: -10vw;
+	z-index: -1;
+	object-fit: cover;
+	height: 100vh;
+}
+.introContent {
+	height: 100vh;
+	width: 100vw;
+	padding: 2rem;
+	font-size: 3rem;
+	font-weight: 700;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.hello {
+	font-size: 1.75rem;
+	font-weight: 500;
+}
+.introContent div {
+	display: flex;
+}
+.introName {
+	overflow: hidden;
+	display: block;
+	float: left;
+	width: 21%;
+	color: yellow;
+	border-right: 0.15em solid yellow;
+	/* animation: typing 3.5s steps(30, end) infinite,
+		blink-caret 0.75s step-end infinite; */
+	animation: typing 5.5s steps(30, end) infinite,
+		blink-caret 1s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+	0% {
+		width: 0;
+	}
+	53.33% {
+		width: 21%;
+	} /* 5.5s / 7.5s = 0.7333 -> 73.33% */
+	100% {
+		width: 21%;
+	}
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+	from,
+	to {
+		border-color: transparent;
+	}
+	50% {
+		border-color: orange;
+	}
+}
+
+.introPara {
+	font-size: medium;
+	font-weight: 200;
+	letter-spacing: 1px;
+}
+.btn {
+	background: white;
+	margin: 1rem 0;
+	padding: 0.75rem 1.5rem;
+	border: none;
+	border-radius: 2rem;
+}
+.btnImg {
+	object-fit: cover;
+	margin: 0 0.25rem;
+	height: 1rem;
+}
+@media screen and (max-width: 840px) {
+	.bg {
+		right: 0vw;
+	}
+	.introContent {
+		font-size: 10vw;
+	}
+	.hello {
+		font-size: 4.5vw;
+	}
+}
+@media screen and (max-width: 480px) {
+	.bg {
+		right: -10vw;
+	}
+}

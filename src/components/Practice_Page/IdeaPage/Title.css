@@ -1,0 +1,18 @@
+.ideaBtnTitle {
+	width: 100%;
+	display: inline;
+	padding: 0 1.2rem;
+	margin: 1.5rem 0 2rem;
+}
+.ideaBtnTitle span:nth-child(1n) {
+	font-size: 2.5rem;
+	font-weight: 800;
+	color: white;
+}
+.ideaBtnTitle span:nth-child(2n) {
+	font-size: 1rem;
+	font-weight: 300;
+	color: rgb(175, 175, 175);
+	word-spacing: 0.2rem;
+	letter-spacing: 0.1rem;
+}

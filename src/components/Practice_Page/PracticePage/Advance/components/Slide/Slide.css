@@ -1,0 +1,62 @@
+* {
+	font-family: "Poppins", sans-serif;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+:root {
+	--size: 0.625rem;
+	/* 
+	calc(var(--size)*1)
+	*/
+}
+.Frame_Slide {
+	background: #191919;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	.gallery-wrap {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 10% auto;
+	}
+	#backBtn,
+	#nextBtn {
+		width: calc(var(--size) * 3.125);
+		cursor: pointer;
+		margin: calc(var(--size) * 2.5);
+	}
+	.gallery {
+		width: calc(var(--size) * 56.25);
+		display: flex;
+		overflow-x: scroll;
+	}
+	.gallery div {
+		width: 100%;
+		display: grid;
+		grid-template-columns: auto auto auto;
+		grid-gap: calc(var(--size) * 1.25);
+		padding: calc(var(--size) * 0.625);
+		overflow: "hidden";
+		flex: none;
+	}
+	.gallery div img {
+		width: 100%;
+		object-fit: cover;
+		/* chuyển đổi ảnh hoặc phần tử thành ảnh đen trắng */
+		filter: grayscale(100%);
+		transition: all 0.5s;
+	}
+	.gallery::-webkit-scrollbar {
+		display: none;
+	}
+
+	.gallery div img:hover {
+		filter: grayscale(0);
+		cursor: pointer;
+		transform: scale(1.1);
+	}
+	
+}

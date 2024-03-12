@@ -1,0 +1,81 @@
+:root {
+	--size: 0.625rem;
+}
+.Frame_AgeCacultor {
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		min-height: 100%;
+		background: linear-gradient(135deg, #4203a9, #90bafc);
+		color: #fff;
+		padding: calc(var(--size) * 3);
+		box-sizing: border-box;
+	}
+	.calculator {
+		width: 80%;
+	}
+	.calculator h1 {
+		font-size: calc(var(--size) * 3.5);
+		transition: all 1s ease;
+	}
+	.calculator h1 span {
+		color: #ffff76;
+	}
+	.input-box {
+		margin: calc(var(--size) * 2.5) 0;
+		padding: calc(var(--size) * 2);
+		border-radius: calc(var(--size) * 0.6);
+		background: rgba(255, 255, 255, 0.3);
+		align-items: center;
+		display: flex;
+		transition: all 1s ease;
+	}
+	.input-box input {
+		flex: 1;
+		margin-right: calc(var(--size) * 1.2);
+		padding: calc(var(--size) * 0.9) calc(var(--size) * 1.2);
+		border: 0;
+		outline: 0;
+		background: white;
+		font-size: calc(var(--size) * 1.2);
+		border-radius: calc(var(--size) * 0.2);
+		position: relative;
+		transition: all 1s ease;
+	}
+
+	.input-box button {
+		background: #ffff76;
+		border: 0;
+		outline: 0;
+		font-size: calc(var(--size) * 1.1);
+		padding: calc(var(--size) * 1.1) calc(var(--size) * 2.5);
+		border-radius: calc(var(--size) * 0.1);
+		font-weight: 600;
+		color: #333;
+		cursor: pointer;
+		transition: all 1s ease;
+	}
+}
+
+/* @media (min-width: 1024px) {
+	:root {
+		--size: 1rem;
+	}
+}
+@media (min-width: 750px) and (max-width: 1024px) {
+	:root {
+		--size: 0.625rem;
+	}
+}
+@media (min-width: 400px) and (max-width: 750px) {
+	:root {
+		--size: 0.625rem;
+	}
+}
+@media (max-width: 400px) {
+	:root {
+		--size: 0.4rem;
+	}
+} */

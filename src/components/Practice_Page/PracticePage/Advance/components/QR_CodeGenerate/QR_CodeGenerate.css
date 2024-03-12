@@ -1,0 +1,112 @@
+* {
+	font-family: "Poppins", sans-serif;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+:root {
+	--size: 0.625rem;
+	/* 
+	calc(var(--size)*1)
+	*/
+}
+.Frame_QR_CodeGenerate {
+	position: relative;
+	.container {
+		width: calc(var(--size) * 25);
+		padding: calc(var(--size) * 1.5);
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background: #fff;
+		border-radius: 10px;
+	}
+	.container p {
+		font-weight: 600;
+		font-size: calc(var(--size) * 1);
+		color: black;
+		margin-bottom: calc(var(--size) * 0.5);
+	}
+	.container input {
+		width: 100%;
+		height: calc(var(--size) * 3.125);
+		border: 1px solid #494eea;
+		outline: 0;
+		padding: 0;
+		margin: calc(var(--size) * 0.6) 0 calc(var(--size) * 1.25);
+		border-radius: 5px;
+	}
+	.container button {
+		width: 100%;
+		height: calc(var(--size) * 3.125);
+		background: #494eea;
+		color: #fff;
+		outline: 0;
+		padding: 0;
+		margin: calc(var(--size) * 0.6) 0 calc(var(--size) * 1.25);
+		border-radius: 5px;
+		box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+		cursor: pointer;
+		margin: calc(var(--size) * 1.25) 0;
+		font-weight: 500;
+	}
+	#imgBox {
+		width: calc(var(--size) * 12.5);
+		border-radius: 5px;
+		max-height: 0;
+		overflow: hidden;
+		margin: 0px auto;
+		transition: max-height 1s;
+	}
+	#imgBox img {
+		width: 100%;
+		padding: calc(var(--size) * 0.62);
+	}
+	#imgBox.show-img {
+		max-height: calc(var(--size) * 18.75);
+
+		border: 1px solid #d1d1d1;
+	}
+	.error {
+		animation: shake 0.1s linear 10;
+	}
+}
+@keyframes shake {
+    0%{
+        transform:translateX(0px)
+    }
+    20%{
+        transform:translateX(-2px)
+    }
+    50%{
+        transform:translateX()
+    }
+    70%{
+        transform:translateX(2px)
+    }
+    100%{
+        transform:translateX()
+    }
+}
+/* 
+@media (min-width: 1024px) {
+	:root {
+		--size: 1rem;
+	}
+}
+@media (min-width: 750px) and (max-width: 1024px) {
+	:root {
+		--size: 0.8rem;
+	}
+}
+@media (min-width: 400px) and (max-width: 750px) {
+	:root {
+		--size: 0.625rem;
+	}
+}
+@media (max-width: 400px){
+	:root {
+		--size: 0.4rem;
+	}
+} */

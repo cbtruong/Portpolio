@@ -1,0 +1,108 @@
+* {
+	font-family: "Poppins", sans-serif;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+:root {
+	--size: 0.625rem;
+	/* 
+	calc(var(--size)*1)
+	*/
+}
+.Frame_Popup {
+	position: relative;
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		width: 100%;
+		min-height: 100%;
+		background: linear-gradient(135deg, #4203a9, #90bafc);
+		color: #fff;
+		padding: calc(var(--size) * 3);
+		box-sizing: border-box;
+	}
+	.btn {
+		padding: calc(var(--size) * 0.65) calc(var(--size) * 3.9);
+		background: #fff;
+		border: 0;
+		outline: none;
+		cursor: pointer;
+		font-size: calc(var(--size) * 1.4);
+		font-weight: 500;
+		border-radius: calc(var(--size) * 1.9);
+	}
+	.popup {
+		width: calc(var(--size) * 25);
+		background: #fff;
+		border-radius: calc(var(--size) * 0.4);
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translate(-50%, -50%) scale(0.1);
+		text-align: center;
+		padding: 0 calc(var(--size) * 1.9) calc(var(--size) * 1.9);
+		color: #333;
+		/* ẩn nội dung nhưng vẫn được tính vào layout của trang
+		=>các phần tử xung quanh nó vẫn sẽ bị ảnh hưởng bởi diện tích mà nó chiếm dụng
+		  */
+		visibility: hidden;
+		transition: transform 0.4s, top 0.4s;
+	}
+	.open-popup {
+		visibility: visible;
+		top: 50%;
+		transform: translate(-50%, -50%) scale(1);
+	}
+	.popup img {
+		width: calc(var(--size) * 6.25);
+		margin-top: calc(var(--size) * (-3.125));
+		border-radius: 50%;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+		transition: all 0.4s, top 0.4s;
+	}
+	.popup h2 {
+		font-size: calc(var(--size) * 2.3);
+		font-weight: 500;
+		margin: calc(var(--size) * 1.9) 0 calc(var(--size) * 0.6);
+		transition: all 0.4s, top 0.4s;
+	}
+	.popup button {
+		width: 100%;
+		margin-top: calc(var(--size) * 3.125);
+		padding: calc(var(--size) * 0.6) 0;
+		background: #6fd649;
+		color: #fff;
+		border: 0;
+		outline: none;
+		font-size: calc(var(--size) * 1.1);
+		border-radius: calc(var(--size) * 0.3);
+		cursor: pointer;
+		box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+		transition: all 0.4s, top 0.4s;
+	}
+}
+
+/* 
+@media (min-width: 1024px) {
+	:root {
+		--size: 1rem;
+	}
+}
+@media (min-width: 750px) and (max-width: 1024px) {
+	:root {
+		--size: 0.8rem;
+	}
+}
+@media (min-width: 400px) and (max-width: 750px) {
+	:root {
+		--size: 0.625rem;
+	}
+}
+@media (max-width: 400px){
+	:root {
+		--size: 0.4rem;
+	}
+} */

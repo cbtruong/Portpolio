@@ -1,0 +1,99 @@
+.navbar {
+	/* 
+    rem : dựa trên kích thước của phông chữ của phần tử gốc của tài liệu (thường là thẻ <html>)
+    */
+	background: rgb(30, 30, 30);
+	height: 5rem;
+	width: 100vw;
+	max-width: 90rem;
+	margin: 0 auto;
+	padding: 1rem 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	/* 
+    #position: sticky;
+    Ghim lên giao diện với vị trí top
+    */
+	position: sticky;
+	top: 0;
+	z-index: 3;
+}
+.logo {
+	/* 
+    # object-fit: cover;
+        Xác định cách một phần tử <img> hoặc <video> nên được thay đổi kích thước để phù hợp 
+    với kích thước của khung chứa của nó. Giá trị cover của object-fit chỉ định rằng nội 
+    dung của phần tử nên được thay đổi kích thước để bảo đảm rằng khung chứa được lấp đầy
+    hoàn toàn, trong khi vẫn giữ nguyên tỷ lệ khung hình của nội dung
+    */
+	object-fit: cover;
+	height: 3rem;
+}
+.desktopMenuListItem {
+	margin: 1rem;
+	cursor: pointer;
+}
+.desktopMenuListItem:hover {
+	color: yellow;
+	padding-bottom: 0.5rem;
+	border-bottom: 3px solid yellow;
+}
+.desktopMenuBtn {
+	background: white;
+	color: black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 1rem;
+	border-radius: 2rem;
+}
+
+.desktopMenuImg {
+	object-fit: cover;
+	height: 1rem;
+	width: 1rem;
+	margin: 1rem;
+}
+.active {
+	color: yellow;
+	padding-bottom: 0.5rem;
+	border-bottom: 3px solid yellow;
+}
+.mobMenu {
+	display: none; 
+	object-fit: cover;
+	height: 1.8rem;
+}
+
+.navMenu {
+	position: absolute;
+	top: 4rem;
+	right: 2rem;
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	padding: 0.5rem;
+	height: fit-content;
+	min-width: 15rem;
+	background: rgb(40, 40, 40);
+	border-radius: 1rem;
+}
+.listItem {
+	color: white;
+	padding: 0.25rem 3rem;
+	margin: 0.25rem;
+	background: rgb(30, 30, 30);
+}
+
+@media screen and (max-width:720px) {
+	.mobMenu {
+		display: flex;
+	}
+	.desktopMenu {
+		display: none;
+	}
+	.desktopMenuBtn {
+		display: none;
+	}
+}

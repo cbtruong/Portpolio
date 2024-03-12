@@ -1,0 +1,117 @@
+* {
+	font-family: "Poppins", sans-serif;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+:root {
+	--size: 0.625rem;
+}
+.Frame_Notes {
+	.container {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		min-height: 100%;
+		background: linear-gradient(135deg, #4203a9, #90bafc);
+		color: #fff;
+		padding: calc(var(--size) * 3);
+		box-sizing: border-box;
+	}
+	.container h1 {
+		display: flex;
+		align-items: center;
+		font-size: calc(var(--size) * 2.1);
+		transition: all 1s ease;
+		font-weight: 600;
+	}
+	.container h1 img {
+		width: calc(var(--size) * 3.9);
+		transition: all 1s ease;
+	}
+	.container button img {
+		width: calc(var(--size) * 1.55);
+		margin-right: calc(var(--size) * 0.5);
+		transition: all 1s ease;
+	}
+	.container button {
+		display: flex;
+		align-items: center;
+		width: calc(var(--size) * 12);
+		background: linear-gradient(#9418fd, #571094);
+		color: #fff;
+		font-size: calc(var(--size) * 1);
+		outline: 0;
+		border: 0;
+		border-radius: calc(var(--size) * 2.5);
+		padding: calc(var(--size) * 1) calc(var(--size) * 1.55);
+		margin: calc(var(--size) * 1.9) 0 20px;
+		cursor: pointer;
+		transition: all 1s ease;
+	}
+	.notes-container {
+		overflow: hidden;
+		overflow-y: auto;
+		height: calc(var(--size) * 25);
+	}
+	.note {
+		display: flex;
+		position: relative;
+		width: 100%;
+		max-width: calc(var(--size) * 31);
+		min-height: calc(var(--size) * 9);
+		background: #fff;
+		color: #333;
+		margin: calc(var(--size) * 1.25) 0;
+		outline: 0;
+		border-radius: calc(var(--size) * 0.3125);
+		transition: all 1s ease;
+	}
+	.note .input-box {
+		width: 100%;
+		max-width: calc(var(--size) * 31);
+		background: #fff;
+		color: #333;
+		padding: calc(var(--size) * 0) calc(var(--size) * 1.25);
+		outline: 0;
+		border: none;
+		margin: calc(var(--size) * 1.25) 0;
+		border-radius: calc(var(--size) * 0.3125);
+		box-sizing: border-box;
+		resize: none;
+		transition: all 1s ease;
+	}
+	.note img {
+		position: absolute;
+		width: 5%;
+		object-fit: cover;
+		bottom: calc(var(--size) * 1);
+		right: calc(var(--size) * 1);
+		cursor: pointer;
+		transition: all 1s ease;
+		z-index: 2;
+		top: calc(var(--size) * 0.2);
+		right: calc(var(--size) * 1.2);
+	}
+}
+
+/* @media (min-width: 1024px) {
+	:root {
+		--size: 1rem;
+	}
+}
+@media (min-width: 750px) and (max-width: 1024px) {
+	:root {
+		--size: 0.8rem;
+	}
+}
+@media (min-width: 400px) and (max-width: 750px) {
+	:root {
+		--size: 0.625rem;
+	}
+}
+@media (max-width: 400px) {
+	:root {
+		--size: 0.4rem;
+	}
+} */

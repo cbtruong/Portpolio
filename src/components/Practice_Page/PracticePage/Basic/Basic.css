@@ -1,0 +1,22 @@
+.practiceBasic_Frame {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+	width: 100%;
+	padding: 1.5rem 1rem 0;
+	box-sizing: border-box;
+	
+}
+.contentFrame {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	background-color: rgb(49, 49, 49);
+	box-shadow: 0 0 0.5rem rgb(119, 119, 119), 0 0 1rem rgb(135, 135, 135);
+	width: 46.5%;
+	height: 25rem;
+	margin-bottom: 2rem;
+	border-radius: 0.5rem;
+}

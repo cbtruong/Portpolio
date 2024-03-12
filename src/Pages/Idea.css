@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	background: transparent;
+	font-family: "Poppins", sans-serif;
+}
+:root {
+	--width-menu: 17vw;
+	--color: rgb(200, 200, 1);
+}
+body {
+	height: 100%;
+}
+.idea {
+	display: flex;
+}
+.ideaSession {
+	width: 98.9vw;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	box-sizing: border-box;
+	background-color: rgb(152, 134, 168);
+}
+.ideaMenus {
+	width: var(--width-menu);
+	overflow: hidden;
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	background-color: black;
+	padding: 2rem 0.75rem;
+	box-sizing: border-box;
+	box-shadow: 0.2rem 0 1.5rem rgb(41, 41, 41);
+}
+.ideaMenus > a {
+	height: 6rem;
+	margin: 0 auto;
+	transition: filter 0.5s ease-in-out;
+}
+.ideaMenus > a:hover {
+	filter: drop-shadow(0 0 1.3rem var(--color));
+}
+.ideaMenus a .logo {
+	height: 100%;
+	object-fit: cover;
+}
+
+.ideaMenu {
+	padding: 2rem 0.5rem;
+}
+.ideaMenu > .ideaTitle {
+	display: block;
+	width: 100%;
+	padding: 0.75rem 1.4rem;
+	font-size: 1rem;
+	font-weight: 500;
+	color: white;
+	margin-bottom: 3%;
+	letter-spacing: 0.1rem;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+.ideaMenu > .ideaTitle:hover {
+	background: rgb(41, 41, 41);
+}
+.ideaMenu .ideaTitle:nth-child(1) {
+	background: rgb(41, 41, 41);
+}
+
+/* content */
+.ideaBtnContent {
+	width: calc(100vw - (var(--width-menu)));
+	height: 100vh;
+	background: black;
+	margin-left: calc((var(--width-menu)));
+	display: flex;
+	overflow: hidden;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+	overflow-y: auto;
+}

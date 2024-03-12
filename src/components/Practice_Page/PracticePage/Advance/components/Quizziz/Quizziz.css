@@ -1,0 +1,106 @@
+* {
+	font-family: "Poppins", sans-serif;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+:root {
+	--size: 0.625rem;
+	/* 
+	calc(var(--size)*1)
+	*/
+}
+.Frame_Quizziz {
+    .main {
+        width: 100%;
+        height: 100%;
+        background-color: #ececec;
+        box-sizing: border-box;
+        margin-bottom: calc(var(--size)*2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #001e4d;
+    }
+    .app {
+        background: #fff;
+        width: 90%;
+        max-width: calc(var(--size)* 37.5);
+        margin: calc(var(--size)* 3.125) auto 0;
+        border-radius: 10px;
+        padding: calc(var(--size)* 2.5);
+    }
+    .app h1 {
+        font-size: calc(var(--size)*1.5);
+        color: #001e4d;
+        font-weight: 600;
+        border-bottom: 1px solid #333;
+        padding-bottom: calc(var(--size)*1.9);
+    }
+    .quiz {
+        padding: calc(var(--size)*0.25) 0;
+    }
+    .quiz h2 {
+        font-size: calc(var(--size)*1.15);
+    }
+    .btn {
+        background: #fff;
+        color: #222;
+        font-weight: 500;
+        width: 100%;
+        border: 1px solid #222;
+        padding: calc(var(--size)*0.75);
+        margin: calc(var(--size)*0.75) 0;
+        text-align: left;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.5s;
+    }
+    .btn:hover:not([disabled]) {
+        background-color: #222;
+        color: #fff;
+    }
+    .btn:disabled {
+        cursor: no-drop;
+    }
+    #next-btn {
+        background: #001e4d;
+        color: #fff;
+        font-weight: 500;
+        width: calc(var(--size)*9.375);
+        border: 0;
+        padding: calc(var(--size)* 0.75);
+        margin: calc(var(--size)*1.25) auto 0;
+        border-radius: 4px;
+        cursor: pointer;
+        display: none;
+    }
+    .correct {
+        background: #3aeabc;
+    }
+    .incorrect {
+        background: #ff9393;
+    }
+
+}
+/* 
+@media (min-width: 1024px) {
+	:root {
+		--size: 1rem;
+	}
+}
+@media (min-width: 750px) and (max-width: 1024px) {
+	:root {
+		--size: 0.8rem;
+	}
+}
+@media (min-width: 400px) and (max-width: 750px) {
+	:root {
+		--size: 0.625rem;
+	}
+}
+@media (max-width: 400px){
+	:root {
+		--size: 0.4rem;
+	}
+} */
